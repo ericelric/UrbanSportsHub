@@ -18,8 +18,12 @@ const ProfilePicture = ({ uploaderImage }) => {
           alt="Member profile"
         />
       ) : (
-        <div className="profile-picture__placeholder">
-          <LuImage size={40} />
+        <div className="profile-picture__placeholder-wrapper">
+          <div className="profile-picture__placeholder">
+            <div className="profile-picture__placeholder-icon">
+              <LuImage size={40} />
+            </div>
+          </div>
         </div>
       )}
     </>
