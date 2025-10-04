@@ -9,14 +9,10 @@
   max-width: 30rem;
   padding: 0.75rem 1rem;
   width: 100%;
+  transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 }
 
-.button:focus {
-  background: var(--element-background);
-}
-
-.button:hover,
-.button:focus-visible {
+.button:active {
   background: light-dark(#edf4fc, #0f0f0f);
   border-color: light-dark(#0056b3, #edf4fc);
   color: light-dark(#0056b3, #edf4fc);
@@ -27,15 +23,10 @@
   color: var(--app-background);
 }
 
-.button--primary:focus {
-  background: var(--blue);
-}
-
-.button--primary:hover,
-.button--primary:focus-visible {
-  background: #0056b3;
-  border-color: #0056b3;
-  color: white;
+.button--primary:active {
+  background: light-dark(#edf4fc, #0f0f0f);
+  border-color: light-dark(#0056b3, #edf4fc);
+  color: light-dark(#0056b3, #edf4fc);
 }
 
 .button--icon {
@@ -50,10 +41,10 @@
   justify-content: center;
   padding: 0;
   width: 3.75rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.button--icon:hover,
-.button--icon:focus-visible {
+.button--icon:active {
   background: #0056b3;
   color: white;
 }
@@ -63,23 +54,46 @@
   opacity: 0.4;
 }
 
-.button--disabled:hover,
-.button--disabled:focus-visible {
-  background: none;
-  border-color: var(--blue);
-  color: var(--blue);
-  cursor: default;
-}
-
 .button--trash {
   border-color: var(--red);
   color: var(--red);
   font-size: 0.875rem;
 }
 
-.button--trash:hover,
-.button--trash:focus-visible {
-  background: rgba(255,0,0,0.1);
+.button--trash:active {
+  background: rgba(255, 0, 0, 0.1);
   border-color: var(--red);
   color: var(--red);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    background: light-dark(#edf4fc, #0f0f0f);
+    border-color: light-dark(#0056b3, #edf4fc);
+    color: light-dark(#0056b3, #edf4fc);
+  }
+
+  .button--primary:hover {
+    background: light-dark(#0056b3, #3a629b);
+    border-color: light-dark(#0056b3, #3a629b);
+    color: light-dark(#fff, #edf4fc);
+  }
+
+  .button--icon:hover {
+    background: #0056b3;
+    color: white;
+  }
+
+  .button--disabled:hover {
+    background: none;
+    border-color: var(--blue);
+    color: var(--blue);
+    cursor: default;
+  }
+
+  .button--trash:hover {
+    background: rgba(255, 0, 0, 0.1);
+    border-color: var(--red);
+    color: var(--red);
+  }
 }
