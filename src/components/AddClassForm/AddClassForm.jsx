@@ -19,19 +19,18 @@ const AddClassForm = ({ onAddClass }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
-    // Basic validation
-    if (!formData.course.trim() || !formData.location.trim() || !formData.time.trim()) {
-      alert('Please fill in all fields');
-      return;
-    }
 
     onAddClass(formData);
     setFormData({ course: '', location: '', time: '' });
+    
+    const popover = document.getElementById('add-class-popover');
+    if (popover) {
+      popover.hidePopover();
+    }
   };
 
   return (
-    <div className="add-class-form" id='my-popover' popover="auto">
+    <div className="add-class-form" id='add-class-popover' popover="auto">
       <h3 className="add-class-form__title">Add New Class</h3>
       <form onSubmit={handleSubmit}>
         <div className="add-class-form__group">
@@ -79,7 +78,7 @@ const AddClassForm = ({ onAddClass }) => {
           <Button type="submit" buttonType="primary">
             Add Class
           </Button>
-          <Button type="button" buttonType="secondary" popovertarget="my-popover" popovertargetaction="hide">
+          <Button type="button" buttonType="secondary" popovertarget="add-class-popover" popovertargetaction="hide">
             Cancel
           </Button>
         </div>

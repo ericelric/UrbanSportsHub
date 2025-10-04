@@ -29,7 +29,7 @@ const ClassesPage = () => {
       <div className="classes__header">
         <Button 
           buttonType="primary"
-          popovertarget="my-popover"
+          popovertarget="add-class-popover"
         >
           Add Class
         </Button>

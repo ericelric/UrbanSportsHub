@@ -24,7 +24,7 @@
   padding: 1rem;
   position: relative;
   text-align: center;
-  width: clamp(10rem, 77vw, 30rem);
+  width: clamp(10rem, calc(100vw - 2rem), 30rem);
 }
 
 .profile__card--first {
