@@ -1,6 +1,5 @@
 .profile-page {
   align-items: center;
-  background: var(--map-background);
   display: flex;
   flex-direction: column;
   height: 100dvh;
@@ -19,6 +18,7 @@
 .profile__card {
   background: var(--element-background);
   border-radius: 0.5rem;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.2);
   container-type: inline-size;
   padding: 1rem;
   position: relative;
