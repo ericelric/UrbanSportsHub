@@ -1,15 +1,22 @@
 .button {
-  border-radius: 0.5rem;
   border: 1px solid var(--blue);
+  border-radius: 0.5rem;
   color: var(--blue);
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
+  height: 3rem;
+  max-width: 30rem;
   padding: 0.75rem 1rem;
   width: 100%;
 }
 
-.button:hover {
+.button:focus {
+  background: var(--element-background);
+}
+
+.button:hover,
+.button:focus-visible {
   background: light-dark(#edf4fc, #0f0f0f);
   border-color: light-dark(#0056b3, #edf4fc);
   color: light-dark(#0056b3, #edf4fc);
@@ -17,10 +24,15 @@
 
 .button--primary {
   background: var(--blue);
-  color: white;
+  color: var(--app-background);
 }
 
-.button--primary:hover {
+.button--primary:focus {
+  background: var(--blue);
+}
+
+.button--primary:hover,
+.button--primary:focus-visible {
   background: #0056b3;
   border-color: #0056b3;
   color: white;
@@ -28,7 +40,8 @@
 
 .button--icon {
   align-items: center;
-  background: var(--blue);
+  background: var(--blue-stable);
+  border: none;
   border-radius: 1rem;
   color: white;
   display: flex;
@@ -39,7 +52,8 @@
   width: 3.75rem;
 }
 
-.button--icon:hover {
+.button--icon:hover,
+.button--icon:focus-visible {
   background: #0056b3;
   color: white;
 }
@@ -49,9 +63,23 @@
   opacity: 0.4;
 }
 
-.button--disabled:hover {
+.button--disabled:hover,
+.button--disabled:focus-visible {
   background: none;
   border-color: var(--blue);
   color: var(--blue);
   cursor: default;
+}
+
+.button--trash {
+  border-color: var(--red);
+  color: var(--red);
+  font-size: 0.875rem;
+}
+
+.button--trash:hover,
+.button--trash:focus-visible {
+  background: rgba(255,0,0,0.1);
+  border-color: var(--red);
+  color: var(--red);
 }

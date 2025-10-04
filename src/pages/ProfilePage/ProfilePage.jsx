@@ -89,7 +89,7 @@ const ProfilePage = () => {
               <input
                 id="name"
                 type="text"
-                placeholder="John Doe"
+                placeholder="e.g., Yamada Taro"
                 value={localName}
                 onChange={(e) => setLocalName(e.target.value)}
                 required
@@ -101,7 +101,7 @@ const ProfilePage = () => {
               <input
                 id="id"
                 type="text"
-                placeholder="00000000"
+                placeholder="e.g., 00000000"
                 value={localMemberId}
                 onChange={(e) => setLocalMemberId(e.target.value)}
                 required

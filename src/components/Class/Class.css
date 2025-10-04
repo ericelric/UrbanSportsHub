@@ -1,57 +1,72 @@
-.class__card {
-  align-items: center;
-  background-color: var(--element-background);
+.class {
   border-radius: 0.5rem;
-  border: 3px solid var(--element-background);
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   color: var(--text);
   display: flex;
-  gap: 1rem;
-  justify-content: space-between;
+  flex-direction: column;
+  gap: 0.5rem;
   max-width: 30rem;
-  padding: calc(1rem - 3px);
+  padding: 1rem;
+  position: relative;
+  width: 100%;
 }
 
-.class__card.selected {
-  border: 3px solid var(--green);
-}
-
-.class__time {
-  align-self: flex-start;
-  color: var(--text);
-  font-size: 1rem;
-  font-weight: 600;
+.class--compact {
+  background-color: var(--element-background);
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .class__details {
-  flex-grow: 1;
-  font-size: 0.875rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.class__time {
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  min-width: fit-content;
 }
 
 .class__course {
+  flex-grow: 1;
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
+}
+
+.class__details-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .class__location {
+  color: var(--text);
+  flex-grow: 1;
   font-size: 0.875rem;
-  margin-bottom: 0.25rem;
   font-weight: 200;
+  height: 1.25rem;
 }
 
 .class__status {
   color: var(--blue);
   font-size: 0.875rem;
   font-weight: 700;
+  height: 1.25rem;
 }
 
 .class__status--checked-in {
-  color: var(--green);
+  color: var(--status-green);
+  display: flex;
+}
+
+.class__status-icon {
+  margin-right: 0.25rem;
+  padding-top: 0.1rem;
 }
 
 .class__action {
   align-items: center;
   display: flex;
-  flex-shrink: 0;
+  gap: 0.5rem;
 }

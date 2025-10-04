@@ -17,7 +17,7 @@
   background-color: var(--app-background);
   border-radius: 50%;
   border: 1px solid var(--bluish-grey);
-  color: var(--element-background);
+  color: var(--bluish-grey);
   display: flex;
   height: 100%;
   justify-content: center;

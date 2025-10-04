@@ -1,0 +1,56 @@
+.add-class-form {
+  background-color: var(--element-background);
+  border: 2px solid light-dark(var(--grey), var(--bluish-grey));
+  border-radius: 0.5rem;
+  left: 50%;
+  max-width: 30rem;
+  padding: 1rem;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% - 2rem);
+}
+
+.add-class-form::backdrop {
+  backdrop-filter: blur(2px);
+  background: rgb(0 0 5 / 60%);
+}
+
+.add-class-form__title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.add-class-form__group {
+  margin-bottom: 1rem;
+}
+
+.add-class-form__label {
+  display: block;
+  font-weight: 700;
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+}
+
+.add-class-form__input {
+  background: var(--element-background);
+  border: 1px solid var(--bluish-grey);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  height: 2.375rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.add-class-form__input::placeholder {
+  color: var(--bluish-grey);
+  font-size: 1rem;
+}
+
+.add-class-form__actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}

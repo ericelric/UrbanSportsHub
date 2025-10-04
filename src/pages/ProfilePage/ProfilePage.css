@@ -1,11 +1,12 @@
 .profile-page {
   align-items: center;
+  background: var(--map-background);
   display: flex;
   flex-direction: column;
   height: 100dvh;
   overflow-y: auto;
-  padding-top: 2rem;
   padding-bottom: 6.5rem;
+  padding-top: 2rem;
 }
 
 .profile__container {
@@ -44,9 +45,10 @@
 
 .profile__input-group input {
   background: var(--element-background);
-  border-radius: 0.5rem;
   border: 1px solid var(--bluish-grey);
+  border-radius: 0.5rem;
   font-size: 1rem;
+  height: 2.375rem;
   padding: 0.5rem;
 }
 
@@ -57,7 +59,8 @@
 
 .profile__current-check-in-value {
   display: block;
-  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
 }
 
 .profile__button-group {

@@ -10,13 +10,25 @@
   padding-top: 1rem;
 }
 
-.classes-headline {
-  color: var(--text);
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 2rem;
+.classes__header {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  width: 100%;
 }
 
-.classes__list .class__card {
-  margin-bottom: 1rem;
+.classes__list {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.classes__list-divider {
+  background: var(--grey);
+  height: 1px;
+  max-width: 30rem;
+  position: relative;
+  width: 100%;
 }

@@ -21,7 +21,7 @@ const ProfilePicture = ({ uploaderImage }) => {
         <div className="profile-picture__placeholder-wrapper">
           <div className="profile-picture__placeholder">
             <div className="profile-picture__placeholder-icon">
-              <LuImage size={40} />
+              <LuImage size={38} />
             </div>
           </div>
         </div>

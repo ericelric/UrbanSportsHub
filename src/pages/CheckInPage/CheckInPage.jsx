@@ -57,6 +57,7 @@ const CheckInPage = () => {
             buttonType={checkInTime ? '' : 'primary'}
             classStatus={checkInTime}
             onSelect={handleOpenModal}
+            variant="compact"
           />
         ) : (
           ''

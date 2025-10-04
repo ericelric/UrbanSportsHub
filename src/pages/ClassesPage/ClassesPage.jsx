@@ -1,40 +1,59 @@
 import './ClassesPage.css';
-import { useState, useEffect, useContext } from 'react';
+import { useContext, Fragment } from 'react';
 import Class from '../../components/Class/Class';
+import AddClassForm from '../../components/AddClassForm/AddClassForm';
+import Button from '../../components/Button/Button';
 import CheckInContext from '../../context/CheckInContext';
+import useClasses from '../../hooks/useClasses';
 
 const ClassesPage = () => {
-  const [classes, setClasses] = useState([]);
-  const { checkInObject, checkInTime, handleCheckInObject } =
-    useContext(CheckInContext);
-
-  // Todo: Move this code to a custom hook
-  useEffect(() => {
-    fetch('/data/classes.json')
-      .then((response) => response.json())
-      .then((data) => setClasses(data))
-      .catch((error) => console.error('Error loading classes:', error));
-  }, []);
+  const { classes, addClass, removeClass } = useClasses();
+  const { checkInObject, checkInTime, handleCheckInObject } = useContext(CheckInContext);
 
   const handleSelectClass = (selectedClass) => {
     handleCheckInObject(selectedClass);
   };
 
+  const handleAddClass = (newClass) => {
+    addClass(newClass);
+  };
+
+  const handleDeleteClass = (classId) => {
+    if (window.confirm('Are you sure you want to delete this class?')) {
+      removeClass(classId);
+    }
+  };
+
   return (
     <div className="classes__page">
+      <div className="classes__header">
+        <Button 
+          buttonType="primary"
+          popovertarget="my-popover"
+        >
+          Add Class
+        </Button>
+      </div>
+
+      <AddClassForm onAddClass={handleAddClass} />
+
       <div className="classes__list">
-        {classes.map((cls) => (
-          <Class
-            key={cls.id}
-            classTime={cls.time}
-            classCourse={cls.course}
-            classLocation={cls.location}
-            buttonText={'Select'}
-            buttonType={checkInObject?.id === cls.id ? 'disabled' : ''}
-            isSelected={checkInObject?.id === cls.id}
-            classStatus={checkInObject?.id === cls.id && checkInTime}
-            onSelect={() => handleSelectClass(cls)}
-          />
+        {classes.map((cls, index) => (
+          <Fragment key={cls.id}>
+            <Class
+              classTime={cls.time}
+              classCourse={cls.course}
+              classLocation={cls.location}
+              buttonText={checkInObject?.id === cls.id ? 'Selected' : 'Select'}
+              buttonType={checkInObject?.id === cls.id ? 'disabled' : ''}
+              classStatus={checkInObject?.id === cls.id && checkInTime}
+              onSelect={() => handleSelectClass(cls)}
+              onDelete={() => handleDeleteClass(cls.id)}
+            />
+            {index < classes.length - 1 && (
+              <div className="classes__list-divider" />
+            )}
+          </Fragment>
         ))}
       </div>
     </div>

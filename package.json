@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "browser-image-compression": "^2.0.2",
+    "class-variance-authority": "^0.7.1",
     "jsqr": "^1.4.0",
     "leaflet": "^1.9.4",
     "react": "^19.0.0",

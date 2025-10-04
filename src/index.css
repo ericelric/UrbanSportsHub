@@ -2,14 +2,16 @@
 
 :root {
   --green: #008462;
-  --blue: light-dark(#347be2, #4289ef);
+  --blue-stable:#2d71cd;
+  --status-green: light-dark(#2cb584, #00c08e);
+  --blue: light-dark(var(--blue-stable), #a0d3ff);
   --red: #e25061;
   --bluish-grey: light-dark(#8c9bb0, #8c9bb0);
   --grey: light-dark(#ddd, #363636);
   --text: light-dark(#000, #fff);
-  --app-background: light-dark(#deeaf9, #222e40);
+  --app-background: light-dark(#fff, #191e24);
   --map-background: light-dark(#deeaf9, #3a629b);
-  --element-background: light-dark(#fff, #191e24);
+  --element-background: light-dark(#fff, #2e3742);
 }
 
 *,
