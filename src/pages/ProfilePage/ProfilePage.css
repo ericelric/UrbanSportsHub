@@ -19,7 +19,6 @@
 .profile__card {
   background: var(--element-background);
   border-radius: 0.5rem;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   container-type: inline-size;
   padding: 1rem;
   position: relative;
