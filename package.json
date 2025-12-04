@@ -14,8 +14,8 @@
     "class-variance-authority": "^0.7.1",
     "jsqr": "^1.4.0",
     "leaflet": "^1.9.4",
-    "react": "^19.0.0",
-    "react-dom": "^19.0.0",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
     "react-icons": "^5.5.0",
     "react-router-dom": "^7.2.0"
   },
