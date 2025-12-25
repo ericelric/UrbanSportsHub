@@ -25,7 +25,7 @@ const Footer = () => {
           <span className="footer__text">Home</span>
         </NavLink>
         <NavLink
-          to="/disclaimer"
+          to="/venues"
           className={({ isActive }) =>
             `footer__icon-wrapper ${
               isActive ? 'footer__icon-wrapper--active' : ''
