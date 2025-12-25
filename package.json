@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fontsource/poppins": "^5.2.7",
     "browser-image-compression": "^2.0.2",
     "class-variance-authority": "^0.7.1",
     "jsqr": "^1.4.0",

@@ -1,4 +1,4 @@
-.venues__headline {
+.disclaimer__headline {
   color: var(--text);
   font-size: 1.25rem;
   font-weight: 600;
@@ -6,10 +6,11 @@
   text-align: center;
 }
 
-.venues {
+.disclaimer {
   width: clamp(10rem, 85%, 65ch);
   margin: 0 auto;
 }
-.venues p {
+.disclaimer p {
   margin-bottom: 2rem;
 }
+

@@ -1,10 +1,10 @@
-import './VenuesPage.css';
+import './DisclaimerPage.css';
 
-const VenuesPage = () => {
+const DisclaimerPage = () => {
   return (
     <>
-      <h1 className="venues__headline">Disclaimer</h1>
-      <div className="venues">
+      <h1 className="disclaimer__headline">Disclaimer</h1>
+      <div className="disclaimer">
         <p>
           This project is for educational and demonstration purposes only. It is
           intended to showcase a security vulnerability in the Urban Sports Club
@@ -18,4 +18,5 @@ const VenuesPage = () => {
   );
 };
 
-export default VenuesPage;
+export default DisclaimerPage;
+

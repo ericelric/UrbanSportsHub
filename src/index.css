@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
 
 :root {
   --green: #008462;
@@ -27,7 +26,7 @@ button {
   border: none;
   color: inherit;
   cursor: pointer;
-  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -38,7 +37,7 @@ body {
   background-color: var(--element-background);
   display: flex;
   flex-direction: column;
-  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   justify-content: space-between;
 }
 

@@ -4,6 +4,7 @@ import {
   FaBottleWater,
   FaQrcode,
   FaCircleUser,
+  FaHouse,
 } from 'react-icons/fa6';
 import './Footer.css';
 
@@ -11,8 +12,20 @@ const Footer = () => {
   return (
     <footer className="footer">
       <nav className="footer__nav">
+      <NavLink
+          to="/disclaimer"
+          className={({ isActive }) =>
+            `footer__icon-wrapper ${
+              isActive ? 'footer__icon-wrapper--active' : ''
+            }`
+          }
+          aria-label="View home"
+        >
+          <FaHouse className="footer__icon" />
+          <span className="footer__text">Home</span>
+        </NavLink>
         <NavLink
-          to="/venues"
+          to="/disclaimer"
           className={({ isActive }) =>
             `footer__icon-wrapper ${
               isActive ? 'footer__icon-wrapper--active' : ''

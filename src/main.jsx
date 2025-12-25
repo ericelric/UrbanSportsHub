@@ -5,9 +5,13 @@ import {
   RouterProvider,
   Navigate,
 } from 'react-router-dom';
+import '@fontsource/poppins/400.css';
+import '@fontsource/poppins/500.css';
+import '@fontsource/poppins/600.css';
+import '@fontsource/poppins/700.css';
 import './index.css';
 import App from './App.jsx';
-import VenuesPage from './pages/VenuesPage/VenuesPage.jsx';
+import DisclaimerPage from './pages/DisclaimerPage/DisclaimerPage.jsx';
 import ClassesPage from './pages/ClassesPage/ClassesPage.jsx';
 import CheckInPage from './pages/CheckInPage/CheckInPage.jsx';
 import ProfilePage from './pages/ProfilePage/ProfilePage.jsx';
@@ -20,11 +24,11 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Navigate to="/venues" replace />,
+        element: <Navigate to="/disclaimer" replace />,
       },
       {
-        path: '/venues',
-        element: <VenuesPage />,
+        path: '/disclaimer',
+        element: <DisclaimerPage />,
         errorElement: <ErrorPage />,
       },
       {
