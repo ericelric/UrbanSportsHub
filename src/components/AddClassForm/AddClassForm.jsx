@@ -6,7 +6,7 @@ const AddClassForm = ({ onAddClass }) => {
   const [formData, setFormData] = useState({
     course: '',
     location: '',
-    time: '05:00'
+    category: ''
   });
 
   const handleInputChange = (e) => {
@@ -21,7 +21,7 @@ const AddClassForm = ({ onAddClass }) => {
     e.preventDefault();
 
     onAddClass(formData);
-    setFormData({ course: '', location: '', time: '' });
+    setFormData({ course: '', location: '', category: '' });
     
     const popover = document.getElementById('add-class-popover');
     if (popover) {
@@ -62,14 +62,15 @@ const AddClassForm = ({ onAddClass }) => {
         </div>
 
         <div className="add-class-form__group">
-          <label className="add-class-form__label" htmlFor="time">Time:</label>
+          <label className="add-class-form__label" htmlFor="category">Category:</label>
           <input
             className="add-class-form__input"
-            type="time"
-            id="time"
-            name="time"
-            value={formData.time}
+            type="text"
+            id="category"
+            name="category"
+            value={formData.category}
             onChange={handleInputChange}
+            placeholder="e.g., Yoga"
             required
           />
         </div>

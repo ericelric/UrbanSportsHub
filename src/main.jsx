@@ -5,10 +5,13 @@ import {
   RouterProvider,
   Navigate,
 } from 'react-router-dom';
-import '@fontsource/poppins/400.css';
-import '@fontsource/poppins/500.css';
-import '@fontsource/poppins/600.css';
-import '@fontsource/poppins/700.css';
+import '@fontsource/hanken-grotesk/100.css';
+import '@fontsource/hanken-grotesk/200.css';
+import '@fontsource/hanken-grotesk/300.css';
+import '@fontsource/hanken-grotesk/400.css';
+import '@fontsource/hanken-grotesk/500.css';
+import '@fontsource/hanken-grotesk/600.css';
+import '@fontsource/hanken-grotesk/700.css';
 import './index.css';
 import App from './App.jsx';
 import DisclaimerPage from './pages/DisclaimerPage/DisclaimerPage.jsx';

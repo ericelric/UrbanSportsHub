@@ -16,7 +16,6 @@ const classCardVariants = cva('class', {
 });
 
 const Class = ({
-  classTime,
   classCourse,
   classLocation,
   classStatus = null,
@@ -29,7 +28,6 @@ const Class = ({
   return (
     <div className={classCardVariants({ variant })}>
       <div className="class__details">
-        <div className="class__time">{classTime}</div>
         <div className="class__details-column">
           <div className="class__course">{classCourse}</div>
           <div className="class__location">{classLocation}</div>

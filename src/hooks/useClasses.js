@@ -7,7 +7,7 @@ const defaultClasses = [
     id: 1,
     course: "Example Workout",
     location: "Example Location",
-    time: "10:00"
+    category: "Fitness"
   },
 ];
 

@@ -1,7 +1,7 @@
 .modal-profile-picture__wrapper {
   align-self: center;
   justify-self: center;
-  margin-bottom: -26cqi;
+  margin-bottom: -18cqi;
   position: relative;
   transform: translate(0, -60%);
   width: max-content;
@@ -11,31 +11,21 @@
   container-type: inline-size;
   height: clamp(6rem, 40vw, 15rem);
   object-fit: cover;
+  position: relative;
   width: clamp(6rem, 40vw, 15rem);
-}
-
-.modal-profile-picture__circle-checked {
-  background-color: white;
-  border-radius: 50%;
-  bottom: 0;
-  height: 30cqi;
-  position: absolute;
-  right: 0.75rem;
-  width: 30cqi;
   z-index: 1;
 }
 
-.modal-profile-picture__circle-checked::before {
-  border-bottom: 2cqi solid var(--green);
-  border-right: 2cqi solid var(--green);
-  content: '';
-  display: inline-block;
-  height: 15cqi;
+.modal-profile-picture__border-circle {
+  background-color: var(--green);
+  border-radius: 50%;
+  height: calc(clamp(6rem, 40vw, 15rem) - 2cqi);
+  left: 50%;
   position: absolute;
-  right: 10cqi;
-  top: 5cqi;
-  transform: rotate(45deg);
-  width: 8cqi;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(clamp(6rem, 40vw, 15rem) - 2cqi);
+  z-index: 0;
 }
 
 .modal-profile-picture__circle-dashed,

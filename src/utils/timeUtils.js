@@ -11,11 +11,10 @@ export const formatDateAndTime = (date) => {
   return new Date(date).toLocaleString([], options);
 };
 
-// Format timer (MM:SS)
+// Format timer (HH:MM:SS)
 export const formatTimer = (seconds) => {
-  const minutes = Math.floor(seconds / 60);
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.floor((seconds % 3600) / 60);
   const remainingSeconds = seconds % 60;
-  return `${String(minutes).padStart(2, '0')}:${String(
-    remainingSeconds
-  ).padStart(2, '0')}`;
+  return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
 };

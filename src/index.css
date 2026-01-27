@@ -1,12 +1,14 @@
 
 :root {
-  --green: #008462;
+  --green: light-dark(#008462, #228769);
   --blue-stable:#2d71cd;
   --status-green: light-dark(#2cb584, #00c08e);
+  --time-green: light-dark(#15664e, #b9dcd2);
   --blue: light-dark(var(--blue-stable), #a0d3ff);
   --red: #e25061;
-  --bluish-grey: light-dark(#8c9bb0, #8c9bb0);
-  --grey: light-dark(#ddd, #363636);
+  --bluish-grey: light-dark(#8c9bb0, #a3afc0);
+  --bluish-text: light-dark(#566781, #cad1db);
+  --grey: light-dark(#eaecf0, #3b4654);
   --text: light-dark(#000, #fff);
   --app-background: light-dark(#fff, #191e24);
   --map-background: light-dark(#ebf2fc, #ebf2fc);
@@ -26,7 +28,7 @@ button {
   border: none;
   color: inherit;
   cursor: pointer;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -37,7 +39,7 @@ body {
   background-color: var(--element-background);
   display: flex;
   flex-direction: column;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: 'Hanken Grotesk', Arial, Helvetica, sans-serif;
   justify-content: space-between;
 }
 

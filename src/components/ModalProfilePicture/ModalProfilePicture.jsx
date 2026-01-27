@@ -4,9 +4,9 @@ import './ModalProfilePicture.css';
 const ModalProfilePicture = () => {
   return (
     <div className="modal-profile-picture__wrapper">
+      <div className="modal-profile-picture__border-circle"></div>
       <div className="modal-profile-picture">
         <ProfilePicture />
-        <div className="modal-profile-picture__circle-checked"></div>
       </div>
       <div className="modal-profile-picture__circle-dashed">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">

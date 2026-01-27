@@ -1,39 +1,111 @@
-.modal__background {
-  background-color: rgb(0 0 5 / 60%);
-  display: block;
+.modal__overlay {
+  background-color: var(--green);
+  mix-blend-mode: multiply;
+  inset: 0;
+  position: fixed;
+  z-index: 3;
+}
+
+.modal {
   inset: 0;
   position: fixed;
   z-index: 4;
 }
 
+.modal__header {
+  background-color: var(--app-background);
+  color: var(--text);
+  display: flex;
+  font-size: 0.875rem;
+  font-weight: 600;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: relative;
+  z-index: 1;
+  z-index: 5;
+}
+
+.modal__header-time {
+  font-variant-numeric: tabular-nums;
+}
+
+.modal__header-icons {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.modal__header-battery {
+  font-size: 1.5rem;
+}
+
+.modal__header-signal {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+}
+
+.modal__header-signal-full {
+  font-size: 1rem;
+  color: #666;
+}
+
+.modal__header-signal-medium {
+  font-size: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  clip-path: inset(0 50% 0 0);
+}
+
+.modal__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  position: fixed;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+
 .modal__content {
-  background-color: var(--green);
-  border-radius: 0.5rem;
+  background-color: var(--app-background);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
   container-type: inline-size;
   display: flex;
   flex-direction: column;
-  font-size: 1.0625rem;
+  font-size: 1rem;
   left: 50%;
-  padding: 1rem 0.75rem;
+  max-width: 40rem;
+  padding: 1rem 0;
   position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: clamp(10rem, 77vw, 30rem);
+  top: 25%;
+  transform: translateX(-50%);
+  height: 75%;
+  width: 100%;
+  z-index: 1;
 }
 
 .modal__icon {
-  color: white;
   font-size: 1.625rem;
   position: absolute;
   top: 1rem;
+  background-color: var(--app-background);
+  border-radius: 50%;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
 }
 
 .modal__icon--close {
   left: 0.75rem;
-}
-
-.modal__icon--close:hover {
-  transform: scale(1.1);
+  padding: 0.25rem;
 }
 
 .modal__icon--share {
@@ -41,54 +113,59 @@
 }
 
 .modal__details {
-  color: white;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   text-align: center;
   width: 100%;
 }
 
-.modal__message,
-.modal__course {
-  margin-bottom: 0.5rem;
-}
-
-.modal__course {
-  font-weight: 700;
-}
-
-.modal__id {
-  margin-bottom: 1rem;
-}
-
-.modal__name {
-  font-size: 1.875rem;
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-.modal__date-and-time {
-  align-items: flex-end;
-  color: #fff;
-  display: flex;
+.modal__name-id {
   font-size: 1.25rem;
-  font-weight: 700;
-  justify-content: space-between;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
 }
 
-.modal__date-label {
-  font-size: 0.875rem;
-  font-weight: 400;
+.modal__checkin-time {
+  color: var(--time-green);
+  font-size: 1.0625rem;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
 }
 
-.modal__timer {
+.modal__info-list {
+  overflow: hidden;
+  width: 100%;
+}
+
+.modal__info-row {
   align-items: center;
-  display: flex;
+  border-bottom: 1px solid var(--grey);
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: auto 1fr auto;
+  padding: 1rem;
 }
 
-.modal__timer svg {
-  margin-right: 5px;
+.modal__info-icon {
+  color: var(--bluish-grey);
+  font-size: 1.25rem;
 }
 
-.modal__timer span {
-  width: 3.5rem;
+.modal__info-icon--activity {
+  transform: rotate(-12deg);
+}
+
+.modal__info-icon--category {
+  transform: rotate(90deg);
+}
+
+.modal__info-label {
+  color: var(--text);
+  font-weight: 300;
+}
+
+.modal__info-value {
+  color: var(--bluish-text);
+  font-weight: 300;
+  text-align: right;
+  font-size: 1.125rem;
 }
