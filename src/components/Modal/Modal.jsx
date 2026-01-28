@@ -4,7 +4,6 @@ import CheckInContext from "../../context/CheckInContext";
 import ModalProfilePicture from "../ModalProfilePicture/ModalProfilePicture";
 import { formatDateAndTime, formatTimer } from "../../utils/timeUtils";
 import { IoCloseOutline, IoShareSocialOutline } from "react-icons/io5";
-import { BsBatteryHalf, BsReception4 } from "react-icons/bs";
 import { FaLocationDot, FaBottleWater, FaTag } from "react-icons/fa6";
 import "./Modal.css";
 
@@ -13,7 +12,6 @@ const Modal = ({ onClose }) => {
   const { checkInTime, checkInObject, setAndStoreCheckInTime } =
     useContext(CheckInContext);
   const [timeElapsed, setTimeElapsed] = useState(0);
-  const [currentTime, setCurrentTime] = useState(new Date());
 
   // The check-in time is set when the modal is opened for the first time
   useEffect(() => {
@@ -28,36 +26,15 @@ const Modal = ({ onClose }) => {
 
     const timer = setInterval(() => {
       setTimeElapsed(Math.floor((new Date() - checkInTime) / 1000));
-      setCurrentTime(new Date());
     }, 1000);
 
     return () => clearInterval(timer);
   }, [checkInTime]);
 
-  const formatCurrentTime = (date) => {
-    return date.toLocaleTimeString("de-DE", {
-      hour: "2-digit",
-      minute: "2-digit",
-    });
-  };
-
   return (
     <>
       <div className="modal__overlay"></div>
       <div className="modal">
-        <div className="modal__header">
-          <div className="modal__header-time">
-            {formatCurrentTime(currentTime)}
-          </div>
-          <div className="modal__header-icons">
-            <div className="modal__header-signal">
-              <BsReception4 className="modal__header-signal-full" />
-              <BsReception4 className="modal__header-signal-medium" />
-            </div>
-            <BsBatteryHalf className="modal__header-battery" />
-          </div>
-        </div>
-
         <div className="modal__button-wrapper">
           <button
             className="modal__icon modal__icon--close"

@@ -5,7 +5,6 @@ import Button from '../../components/Button/Button';
 import Class from '../../components/Class/Class';
 import Scanner from '../../components/Scanner/Scanner';
 import CheckInContext from '../../context/CheckInContext';
-import { enterFullscreen, exitFullscreen } from '../../utils/fullscreenUtils';
 import { BiQrScan } from 'react-icons/bi';
 import { useNavigate } from 'react-router-dom';
 import './CheckInPage.css';
@@ -17,12 +16,10 @@ const CheckInPage = () => {
   const navigate = useNavigate();
 
   const handleOpenModal = () => {
-    enterFullscreen();
     setIsModalOpen(true);
   };
 
   const handleCloseModal = () => {
-    exitFullscreen();
     setIsModalOpen(false);
   };
 

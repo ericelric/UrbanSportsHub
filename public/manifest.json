@@ -1,0 +1,22 @@
+{
+  "name": "Urban Sports Hub",
+  "short_name": "Urban Sports Hub",
+  "description": "Urban Sports Club check-in app",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#191e24",
+  "theme_color": "#191e24",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/pwa-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/pwa-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

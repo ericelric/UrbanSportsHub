@@ -12,59 +12,12 @@
   z-index: 4;
 }
 
-.modal__header {
-  background-color: var(--app-background);
-  color: var(--text);
-  display: flex;
-  font-size: 0.875rem;
-  font-weight: 600;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1.5rem;
-  position: relative;
-  z-index: 1;
-  z-index: 5;
-}
-
-.modal__header-time {
-  font-variant-numeric: tabular-nums;
-}
-
-.modal__header-icons {
-  align-items: center;
-  display: flex;
-  gap: 0.5rem;
-}
-
-.modal__header-battery {
-  font-size: 1.5rem;
-}
-
-.modal__header-signal {
-  position: relative;
-  display: flex;
-  align-items: flex-end;
-}
-
-.modal__header-signal-full {
-  font-size: 1rem;
-  color: #666;
-}
-
-.modal__header-signal-medium {
-  font-size: 1rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  clip-path: inset(0 50% 0 0);
-}
-
 .modal__button-wrapper {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   position: fixed;
-  top: 3rem;
+  top: 1rem;
   left: 0;
   right: 0;
   z-index: 5;
