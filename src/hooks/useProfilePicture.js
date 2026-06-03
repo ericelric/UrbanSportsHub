@@ -1,16 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import imageCompression from 'browser-image-compression';
 
 const useProfilePicture = () => {
-  const [image, setImage] = useState(null);
+  const [image, setImage] = useState(
+    () => localStorage.getItem('memberProfilePicture') ?? null
+  );
   const [error, setError] = useState('');
-
-  useEffect(() => {
-    const savedImage = localStorage.getItem('memberProfilePicture');
-    if (savedImage) {
-      setImage(savedImage);
-    }
-  }, []);
 
   const handleImageUpload = async (e) => {
     const file = e.target.files[0];
