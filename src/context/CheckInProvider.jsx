@@ -3,16 +3,15 @@ import CheckInContext from './CheckInContext';
 
 const CheckInProvider = ({ children }) => {
   // State to track the check-in time
-  const [checkInTime, setCheckInTime] = useState(null);
-
-  // Load check-in time from localStorage when the component mounts
-  useEffect(() => {
+  const [checkInTime, setCheckInTime] = useState(() => {
     const storedTime = localStorage.getItem('checkInTime');
     if (storedTime) {
       const parsedTime = new Date(storedTime);
-      if (!isNaN(parsedTime)) setCheckInTime(parsedTime);
+      if (!isNaN(parsedTime)) return parsedTime;
     }
-  }, []);
+
+    return null;
+  });
 
   // State to track the selected check-in object (class info)
   const [checkInObject, setCheckInObject] = useState(() => {

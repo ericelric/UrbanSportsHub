@@ -14,11 +14,13 @@ import '@fontsource/hanken-grotesk/600.css';
 import '@fontsource/hanken-grotesk/700.css';
 import './index.css';
 import App from './App.jsx';
-import DisclaimerPage from './pages/DisclaimerPage/DisclaimerPage.jsx';
-import ClassesPage from './pages/ClassesPage/ClassesPage.jsx';
-import CheckInPage from './pages/CheckInPage/CheckInPage.jsx';
-import ProfilePage from './pages/ProfilePage/ProfilePage.jsx';
 import ErrorPage from './pages/ErrorPage/ErrorPage.jsx';
+
+const lazyPage = (importPage) => async () => {
+  const { default: Component } = await importPage();
+
+  return { Component };
+};
 
 const router = createBrowserRouter([
   {
@@ -31,27 +33,31 @@ const router = createBrowserRouter([
       },
       {
         path: '/disclaimer',
-        element: <DisclaimerPage />,
+        lazy: lazyPage(() =>
+          import('./pages/DisclaimerPage/DisclaimerPage.jsx')
+        ),
         errorElement: <ErrorPage />,
       },
       {
         path: '/venues',
-        element: <DisclaimerPage />,
+        lazy: lazyPage(() =>
+          import('./pages/DisclaimerPage/DisclaimerPage.jsx')
+        ),
         errorElement: <ErrorPage />,
       },
       {
         path: '/classes',
-        element: <ClassesPage />,
+        lazy: lazyPage(() => import('./pages/ClassesPage/ClassesPage.jsx')),
         errorElement: <ErrorPage />,
       },
       {
         path: '/check-in',
-        element: <CheckInPage />,
+        lazy: lazyPage(() => import('./pages/CheckInPage/CheckInPage.jsx')),
         errorElement: <ErrorPage />,
       },
       {
         path: '/profile',
-        element: <ProfilePage />,
+        lazy: lazyPage(() => import('./pages/ProfilePage/ProfilePage.jsx')),
         errorElement: <ErrorPage />,
       },
       { path: '*', element: <ErrorPage /> },
